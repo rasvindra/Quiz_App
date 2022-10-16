@@ -1,5 +1,7 @@
 var time = 30
 var timeLeft = 30
+var timeEl = document.getElementById("inSeconds")
+var timeKeeper = ""
 var currentScore = ""
 
 
@@ -16,7 +18,7 @@ var allQuestions = [
     correctAnswer: "Abraham Lincoln"
 },
 {
-    question: "Fill in the blank: The 19th Amendment guarantees ____ the right to vote",
+    question: "Fill in the blank: The United States 19th Amendment guarantees ____ the right to vote",
     answers: {
         a: "Women",
         b: "Naturalized Citizens",
@@ -55,15 +57,34 @@ var allQuestions = [
     },
     correctAnswer: "New Delhi"
 },
+];
 
 function beginQuiz() {
 var readyQuiz = confirm ("Are you ready to play CRAZY HISTORY TRIVIA!!? You will be given 30 seconds to answer 5 questions correctly. Every incorrect answer will take 5 seconds off the clock. Good Luck!")
 if (answer){
     startQuestions()
+    timeKeeper = setInterval(countdown, 1000)
 }
-},
+}
 
 function startQuestions(){
 
 
  }
+
+function startClock() {
+    timeLeft--;
+    timeEl.innerHTML = timeLeft;
+if (timeLeft <= 0) {
+ endQuiz()
+}
+}
+
+function endQuiz() {
+    clearInterval(
+        timeKeeper
+    )
+}
+
+
+document.querySelector("#startQuiz").addEventListener("click",beginQuiz)
