@@ -71,6 +71,7 @@ button {
     margin: 60px auto;
     padding: 20px;
     width: 69%;
+    font-weight: bold;
   }
   
 .quizArea li {

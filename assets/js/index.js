@@ -75,9 +75,24 @@ function startQuestions(){
 }
 
 function loadQuestion(){
-//iterate through object array to display q's
+    var question = allQuestions[answersIndex]
+    document.getElementById("answerSection").innerHTML=question.question
+    var ans1 = document.getElementById("answer1");
+    ans1.innerHTML=question.answers.a;
+    ans1.addEventListener('click', checkAnswer);
+  
+    var ans2 = document.getElementById("answer2");
+    ans2.innerHTML=question.answers.b;
+    ans2.addEventListener('click', checkAnswer);
+  
+    var ans3 = document.getElementById("answer3");
+    ans3.innerHTML=question.answers.c;
+    ans3.addEventListener('click', checkAnswer);
 
-}
+    var ans4 = document.getElementById("answer4");
+    ans4.innerHTML=question.answers.d;
+    ans4.addEventListener('click', checkAnswer);
+  }
 
 function startClock() {
     timeLeft--;
