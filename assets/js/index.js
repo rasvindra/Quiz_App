@@ -85,7 +85,7 @@ function startClock() {
 if (timeLeft <= 0) {
  endQuiz()
 }
-}
+};
 
 function endQuiz() {
     clearInterval(
@@ -98,7 +98,7 @@ function endQuiz() {
           text = "No Name Entered";
         } 
         savedScore = text + timeLeft;
-        document.getElementById(yourScore).innerHTML=savedScore;
+        document.getElementById(yourScore).innerHTML=text;
     }
     enterName()
     confirm("You made it! Quiz Completed! Your Score is " + timeLeft + ". Would you like to post Your Score?")
@@ -131,11 +131,5 @@ function checkAnswer(){
           loadQuestion()
         }
 }
-
-// if (timeLeft < 0){
-//             timeLeft = 0
-//           }
-//           timeEl.innerHTML = timeLeft;
-//           endQuiz()
 
 document.querySelector("#startQuiz").addEventListener("click",beginQuiz)
