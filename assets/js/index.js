@@ -9,7 +9,6 @@ var currentScore = ""
 
 
 var allQuestions = [
-
 {
     question: "Which U.S. President was inducted in the National Wrestling Hall of Fame in 1992?",
     answers: { 
@@ -65,14 +64,14 @@ var allQuestions = [
 function beginQuiz() {
 var readyQuiz = confirm ("Are you ready to play CRAZY HISTORY TRIVIA!!? You will be given 30 seconds to answer 5 questions correctly. Every incorrect answer will take 5 seconds off the clock. Good Luck!")
 if (readyQuiz){
-    startQuestions()
-    
+    startQuestions() 
 }
 }
 
 function startQuestions(){
     answersSection.classList.remove("hidden")
     timeKeeper = setInterval(startClock, 1000)
+    loadQuestion()
  }
 
 
@@ -94,8 +93,8 @@ function endQuiz() {
         if (person == null || person == "") {
           text = "No Name Entered";
         } 
-        savedScore = text + timeLeft
-        document.getElementById(yourScore).innerHTML = savedScore;
+        savedScore = text + timeLeft;
+        document.getElementById(yourScore).innerHTML=savedScore;
 }
 
 enterName()
@@ -104,6 +103,7 @@ enterName()
       
       else{}
       answersSection.classList.add("hidden")
+}
 
 function checkAnswer(){
     if  (this.innerText === allQuestions[answersIndex].correctAnswer){
@@ -127,7 +127,7 @@ function checkAnswer(){
           loadQuestion()
         }
         }
-}
+
 // if (timeLeft < 0){
 //             timeLeft = 0
 //           }
