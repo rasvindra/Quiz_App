@@ -15,6 +15,10 @@ main {
     flex-wrap: wrap;
 }
 
+ p {
+font-size:25px ;
+}
+
 header {
     text-align: center;
     width:100%;
@@ -34,6 +38,7 @@ button {
     width:200px;
     height: 100px;
     border-radius: 25px;
+    box-shadow:black 0 2px 5px 2px;
     font-size: 22px;
 }
 
@@ -42,8 +47,7 @@ button {
     background-color: #e1d5d5;
     border: 1px solid #eceff1;
     border-radius: 8px;
-    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
-      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+    box-shadow:black 0 2px 4px 3px;
     margin: 60px auto;
     padding: 20px;
     width: 29%;
@@ -62,8 +66,7 @@ button {
     background-color:	#e1d5d5;
     border: 1px solid #eceff1;
     border-radius: 8px;
-    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
-      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+    box-shadow:black 0 2px 4px 3px;
     margin: 60px auto;
     padding: 20px;
     width: 69%;
@@ -95,8 +98,7 @@ span {
     background-color: #e1d5d5;
     border: 1px solid #eceff1;
     border-radius: 8px;
-    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
-      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+    box-shadow:black 0 2px 4px 3px;
     margin: 60px auto;
     padding: 20px;
     width: 100%;
