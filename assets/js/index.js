@@ -63,15 +63,16 @@ function beginQuiz() {
 var readyQuiz = confirm ("Are you ready to play CRAZY HISTORY TRIVIA!!? You will be given 30 seconds to answer 5 questions correctly. Every incorrect answer will take 5 seconds off the clock. Good Luck!")
 if (answer){
     startQuestions()
-    timeKeeper = setInterval(countdown, 1000)
+    
 }
 }
 
 function startQuestions(){
-
+    timeKeeper = setInterval(countdown, 1000)
 
  }
 
+ 
 function startClock() {
     timeLeft--;
     timeEl.innerHTML = timeLeft;
