@@ -11,7 +11,8 @@ body {
 }
 
 main {
-    display:flex
+    display:flex;
+    flex-wrap: wrap;
 }
 
 header {
@@ -45,14 +46,14 @@ button {
       rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
     margin: 60px auto;
     padding: 20px;
-    width: 80vw;
+    width: 29%;
 }
 
 #clockDisplay {
 	width: 300px;
 	height: 200px;
 	border-radius: 8%;
-	background-color: #c19494;
+	background-color: #e683f5;
 	margin: auto;
 }
 
@@ -65,7 +66,7 @@ button {
       rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
     margin: 60px auto;
     padding: 20px;
-    width: 80vw;
+    width: 69%;
   }
   
 .quizArea li {
@@ -98,5 +99,5 @@ span {
       rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
     margin: 60px auto;
     padding: 20px;
-    width: 50%;
+    width: 100%;
     }
