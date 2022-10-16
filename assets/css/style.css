@@ -39,7 +39,7 @@ button {
     height: 100px;
     border-radius: 25px;
     box-shadow:black 0 2px 5px 2px;
-    font-size: 22px;
+    font-size: 25px;
 }
 
 .timeLeft {
@@ -54,11 +54,12 @@ button {
 }
 
 #clockDisplay {
-	width: 300px;
+	width: 60%;
 	height: 200px;
 	border-radius: 8%;
 	background-color: #e683f5;
 	margin: auto;
+
 }
 
 .quizArea {
