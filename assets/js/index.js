@@ -1,6 +1,8 @@
 var time = 30
 var timeLeft = 30
 var timeEl = document.getElementById("inSeconds")
+var answersSection = document.getElementById("answers")
+var answersIndex = 0
 var timeKeeper = ""
 var currentScore = ""
 
@@ -68,11 +70,12 @@ if (answer){
 }
 
 function startQuestions(){
-    timeKeeper = setInterval(countdown, 1000)
+    answersSection.classList.remove("hidden")
+    timeKeeper = setInterval(startClock, 1000)
 
  }
 
- 
+
 function startClock() {
     timeLeft--;
     timeEl.innerHTML = timeLeft;
@@ -87,5 +90,18 @@ function endQuiz() {
     )
 }
 
+function checkAnswer(){
+    if  (this.innerText === allQuestions[answersIndex].correctAnswer){
+     console.log("Good Job!")
+    }
+    else {
+     console.log("Wrong Answer! You will be deducted 5 seconds from the clock!")
+     timeLeft -=5;
+     if (timeLeft < 0){
+       timeLeft = 0
+     }
+     timeEl.innerHTML = timeLeft;
+    }
+    answersIndex++
 
 document.querySelector("#startQuiz").addEventListener("click",beginQuiz)

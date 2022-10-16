@@ -8,7 +8,15 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #62a7c9;
   color: #001b44;
+}
 
+main {
+    display:flex
+}
+
+header {
+    text-align: center;
+    width:100%;
 }
 
 h1 {
@@ -20,7 +28,35 @@ h1 {
     text-align: center;
   }
 
-#Answers.quizArea {
+
+button {
+    width:200px;
+    height: 100px;
+    border-radius: 25px;
+    font-size: 22px;
+}
+
+.timeLeft {
+    display: block;
+    background-color: #e1d5d5;
+    border: 1px solid #eceff1;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+    margin: 60px auto;
+    padding: 20px;
+    width: 80vw;
+}
+
+#clockDisplay {
+	width: 300px;
+	height: 200px;
+	border-radius: 8%;
+	background-color: #c19494;
+	margin: auto;
+}
+
+.quizArea {
     display: block;
     background-color:	#e1d5d5;
     border: 1px solid #eceff1;
@@ -32,8 +68,7 @@ h1 {
     width: 80vw;
   }
   
-  
-#Answers.quizArea li {
+.quizArea li {
     padding: 8px 0px;
     border: #48b4ef 2px solid;
     text-align: center;
@@ -41,10 +76,9 @@ h1 {
     list-style: none
   }
 
-
-/* #Answers.quizArea {
+.quizArea.hidden {
   display:none
-  } */
+  }
 
 span {
 	display: block;
@@ -54,3 +88,15 @@ span {
 	text-align: center;
 	font-size: 40px;
 }
+
+.scoreArea {
+    display: block;
+    background-color: #e1d5d5;
+    border: 1px solid #eceff1;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+    margin: 60px auto;
+    padding: 20px;
+    width: 50%;
+    }
