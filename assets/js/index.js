@@ -3,6 +3,7 @@ var timeLeft = 30
 var timeEl = document.getElementById("inSeconds")
 var answersSection = document.getElementById("answers")
 var answersIndex = 0
+var savedScore = ""
 var timeKeeper = ""
 var currentScore = ""
 
@@ -63,7 +64,7 @@ var allQuestions = [
 
 function beginQuiz() {
 var readyQuiz = confirm ("Are you ready to play CRAZY HISTORY TRIVIA!!? You will be given 30 seconds to answer 5 questions correctly. Every incorrect answer will take 5 seconds off the clock. Good Luck!")
-if (answer){
+if (readyQuiz){
     startQuestions()
     
 }
@@ -72,7 +73,6 @@ if (answer){
 function startQuestions(){
     answersSection.classList.remove("hidden")
     timeKeeper = setInterval(startClock, 1000)
-
  }
 
 
@@ -88,7 +88,22 @@ function endQuiz() {
     clearInterval(
         timeKeeper
     )
+    function enterName() {
+        let text;
+        let person = prompt("Please enter your name:", "Enter Name");
+        if (person == null || person == "") {
+          text = "No Name Entered";
+        } 
+        savedScore = text + timeLeft
+        document.getElementById(yourScore).innerHTML = savedScore;
 }
+
+enterName()
+  confirm("You made it! Quiz Completed! Your Score is " + timeLeft + ". Would you like to post Your Score?")
+    if(true); // store score
+      
+      else{}
+      answersSection.classList.add("hidden")
 
 function checkAnswer(){
     if  (this.innerText === allQuestions[answersIndex].correctAnswer){
@@ -103,5 +118,20 @@ function checkAnswer(){
      timeEl.innerHTML = timeLeft;
     }
     answersIndex++
+
+    if (answersIndex === allQuestions.length){
+        endQuiz()
+         }
+        else
+        {
+          loadQuestion()
+        }
+        }
+}
+// if (timeLeft < 0){
+//             timeLeft = 0
+//           }
+//           timeEl.innerHTML = timeLeft;
+//           endQuiz()
 
 document.querySelector("#startQuiz").addEventListener("click",beginQuiz)
