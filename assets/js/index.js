@@ -1,62 +1,69 @@
-var time = 45
-var timeLeft = 45
+var time = 30
+var timeLeft = 30
 var currentScore = ""
 
 
 var allQuestions = [
 
 {
-    question: "Question 1",
+    question: "Which U.S. President was inducted in the National Wrestling Hall of Fame in 1992?",
     answers: { 
-        a: "Answer1.1",
-        b: "Answer1.2",
-        c: "Answer1.3",
-        d: "Answer1.4",
+        a: "Bill Clinton",
+        b: "John F Kennedy",
+        c: "Abraham Lincoln",
+        d: "George W Bush",
     },
-    correctAnswer: "Answer1.3"
+    correctAnswer: "Abraham Lincoln"
 },
 {
-    question: "Question 2",
+    question: "Fill in the blank: The 19th Amendment guarantees ____ the right to vote",
     answers: {
-        a: "Answer2.1",
-        b: "Answer2.2",
-        c: "Answer2.3",
-        d: "Answer2.4",
+        a: "Women",
+        b: "Naturalized Citizens",
+        c: "Anyone over the age of 18",
+        d: "Citizens of an America Territory",
     },
-    correctAnswer: "Answer2.1"
+    correctAnswer: "Women"
 },
 {
-    question: "Question 3",
+    question: "What year was the first iPhone released?",
     answers: {
-        a: "Answer3.1",
-        b: "Answer3.2",
-        c: "Answer3.3",
-        d: "Answer3.4",
+        a: "2002",
+        b: "2005",
+        c: "2007",
+        d: "2009",
     },
-    correctAnswer: "Answer3.2"
+    correctAnswer: "2007"
 },
 {
-    question: "Question 4",
+    question: "What Does the Latin Phrase 'Carpe Diem' Stand for",
     answers: {
-        a: "Answer4.1",
-        b: "Answer4.2",
-        c: "Answer4.3",
-        d: "Answer4.4",
+        a: "I saw, I conquered",
+        b: "I think therefore I am",
+        c: "In wine there is truth",
+        d: "Seize the Day",
     },
-    correctAnswer: "Answer4.4"
+    correctAnswer: "Seize the Day"
 },
 {
-    question: "Question 5",
+    question: "What is the Capitol of India",
     answers: {
-        a: "Answer5.1",
-        b: "Answer5.2",
-        c: "Answer5.3",
-        d: "Answer5.4",
+        a: "Bombay",
+        b: "New Delhi",
+        c: "Mumbai",
+        d: "Kolkatta",
     },
-    correctAnswer: "Answer5.2"
+    correctAnswer: "New Delhi"
 },
 
-]
+function beginQuiz() {
+var readyQuiz = confirm ("Are you ready to play CRAZY HISTORY TRIVIA!!? You will be given 30 seconds to answer 5 questions correctly. Every incorrect answer will take 5 seconds off the clock. Good Luck!")
+if (answer){
+    startQuestions()
+}
+},
+
+function startQuestions(){
 
 
-
+ }
