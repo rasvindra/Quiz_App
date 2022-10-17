@@ -117,17 +117,24 @@ function endQuiz() {
 
             if (person == "" || person == "Enter Name") {
               alert("No Name Entered");
-              window.location.reload();
+              ;
 
             }
             
-            else {
+            else if (person="********WHAT EVER VALUE*****") {
             savedScore = person + " " + timeLeft;
             scoreArea.innerHTML=savedScore;
             answersSection.classList.add("hidden");
             }
-    } 
+
+            else {
+                window.location.reload()  
+            }
+        } 
     }
+    // else {
+    //     window.location.reload()
+    // }
 }
 
 function checkAnswer(){
