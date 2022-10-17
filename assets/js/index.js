@@ -2,10 +2,12 @@ var time = 30
 var timeLeft = 30
 var timeEl = document.getElementById("inSeconds")
 var answersSection = document.getElementById("answers")
+var scoreArea = document.getElementById("yourScore")
+// var againBtn = document.createElement('button')
 var answersIndex = 0
 var savedScore = ""
 var timeKeeper = ""
-var currentScore = ""
+
 
 
 var allQuestions = [
@@ -107,38 +109,29 @@ function endQuiz() {
         timeKeeper
     )
 
-    confirm("You made it! Quiz Completed! Your Score is " + timeLeft + ". Would you like to post Your Score?")
-    if(true) { // store score
+    confirm("Quiz Completed! Your Score is " + timeLeft + ". Would you like to post Your Score?")
+    if(true) {
         enterName();
 
         function enterName() {
             let person = prompt("Please enter your name to save your score below:", "Enter Name");
-            
-            if (person == "") {
+
+            if (person == "" || person == "Enter Name") {
               alert("No Name Entered");
-            } 
-            savedScore = person + timeLeft;
-            document.getElementById(yourScore).innerHTML=savedScore;
-    }
-    //   else {
+              window.location.reload();
 
-
-    //   }
-      
+            }
+            
+            else {
+            savedScore = person + " " + timeLeft;
+            scoreArea.innerHTML=savedScore;
+            answersSection.classList.add("hidden");
+            // againBtn.innerHTML = "Try for a Better Score?";
+            // document.body.appendChild(againBtn);
+            }
+    } 
     }
 }
-    // not hiding?
-    answersSection.classList.add("hidden")
-
-    // function enterName() {
-    //     let text;
-    //     let person = prompt("Please enter your name to save your score below:", "Enter Name");
-    //     if (person == "") {
-    //       text = "No Name Entered";
-    //     } 
-    //     savedScore = text + timeLeft;
-    //     document.getElementById(yourScore).innerHTML=text;
-    // }
 
 function checkAnswer(){
     if  (this.innerText === allQuestions[answersIndex].correctAnswer){

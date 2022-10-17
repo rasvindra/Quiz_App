@@ -121,3 +121,7 @@ span {
     padding: 20px;
     width: 100%;
     }
+
+  .scoreArea p {
+    text-align: center;
+  }
