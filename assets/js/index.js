@@ -3,7 +3,6 @@ var timeLeft = 30
 var timeEl = document.getElementById("inSeconds")
 var answersSection = document.getElementById("answers")
 var scoreArea = document.getElementById("yourScore")
-// var againBtn = document.createElement('button')
 var answersIndex = 0
 var savedScore = ""
 var timeKeeper = ""
@@ -126,8 +125,6 @@ function endQuiz() {
             savedScore = person + " " + timeLeft;
             scoreArea.innerHTML=savedScore;
             answersSection.classList.add("hidden");
-            // againBtn.innerHTML = "Try for a Better Score?";
-            // document.body.appendChild(againBtn);
             }
     } 
     }
