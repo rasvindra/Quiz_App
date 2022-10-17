@@ -115,7 +115,7 @@ function endQuiz() {
         function enterName() {
             let person = prompt("Please enter your name to save your score below:", "Enter Name");
 
-            if (person !=null && person.length>0) {
+            if (person !=null && person !=="Enter Name" && person.length>0) {
                 savedScore = person + " " + timeLeft;
                 scoreArea.innerHTML=savedScore;
                 answersSection.classList.add("hidden");
