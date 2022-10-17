@@ -115,20 +115,16 @@ function endQuiz() {
         function enterName() {
             let person = prompt("Please enter your name to save your score below:", "Enter Name");
 
-            if (person == "Enter Name") {
-              alert("No Name Entered");
-              window.location.reload();  
-
+            if (person !=null && person.length>0) {
+                savedScore = person + " " + timeLeft;
+                scoreArea.innerHTML=savedScore;
+                answersSection.classList.add("hidden");
             }
             
-            else if (person="") {
-            savedScore = person + " " + timeLeft;
-            scoreArea.innerHTML=savedScore;
-            answersSection.classList.add("hidden");
-            }
-
             else {
-                window.location.reload()  
+                alert("No Name Entered");
+                window.location.reload(); 
+
             }
         } 
     }
