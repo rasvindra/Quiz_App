@@ -106,23 +106,39 @@ function endQuiz() {
     clearInterval(
         timeKeeper
     )
-    function enterName() {
-        let text;
-        let person = prompt("Please enter your name to save your score below:", "Enter Name");
-        if (person == null || person == "") {
-          text = "No Name Entered";
-        } 
-        savedScore = text + timeLeft;
-        document.getElementById(yourScore).innerHTML=text;
-    }
-    enterName()
-    confirm("You made it! Quiz Completed! Your Score is " + timeLeft + ". Would you like to post Your Score?")
-    if(true); // store score
-      
 
-      else{}
-      answersSection.classList.add("hidden")
+    confirm("You made it! Quiz Completed! Your Score is " + timeLeft + ". Would you like to post Your Score?")
+    if(true) { // store score
+        enterName();
+
+        function enterName() {
+            let person = prompt("Please enter your name to save your score below:", "Enter Name");
+            
+            if (person == "") {
+              alert("No Name Entered");
+            } 
+            savedScore = person + timeLeft;
+            document.getElementById(yourScore).innerHTML=savedScore;
+    }
+    //   else {
+
+
+    //   }
+      
+    }
 }
+    // not hiding?
+    answersSection.classList.add("hidden")
+
+    // function enterName() {
+    //     let text;
+    //     let person = prompt("Please enter your name to save your score below:", "Enter Name");
+    //     if (person == "") {
+    //       text = "No Name Entered";
+    //     } 
+    //     savedScore = text + timeLeft;
+    //     document.getElementById(yourScore).innerHTML=text;
+    // }
 
 function checkAnswer(){
     if  (this.innerText === allQuestions[answersIndex].correctAnswer){
@@ -145,6 +161,6 @@ function checkAnswer(){
         {
           loadQuestion()
         }
-}
+};
 
 document.querySelector("#startQuiz").addEventListener("click",beginQuiz)
