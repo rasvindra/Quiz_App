@@ -108,20 +108,20 @@ function endQuiz() {
         timeKeeper
     )
 
-    confirm("Quiz Completed! Your Score is " + timeLeft + ". Would you like to post Your Score?")
-    if(true) {
+    var saveAnswer = confirm("Quiz Completed! Your Score is " + timeLeft + ". Would you like to post Your Score?")
+    if(saveAnswer) {
         enterName();
 
         function enterName() {
             let person = prompt("Please enter your name to save your score below:", "Enter Name");
 
-            if (person == "" || person == "Enter Name") {
+            if (person == "Enter Name") {
               alert("No Name Entered");
-              ;
+              window.location.reload();  
 
             }
             
-            else if (person="********WHAT EVER VALUE*****") {
+            else if (person="") {
             savedScore = person + " " + timeLeft;
             scoreArea.innerHTML=savedScore;
             answersSection.classList.add("hidden");
@@ -132,9 +132,9 @@ function endQuiz() {
             }
         } 
     }
-    // else {
-    //     window.location.reload()
-    // }
+    else {
+        window.location.reload()
+    }
 }
 
 function checkAnswer(){
