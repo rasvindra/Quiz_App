@@ -1,3 +1,4 @@
+/* global elements for styling */
 *,
 *::before,
 *::after {
@@ -36,7 +37,7 @@ h1 {
     text-align: center;
   }
 
-
+/* style to make button look like it can be clicked */
 button {
     width:200px;
     height: 100px;
@@ -49,6 +50,7 @@ button {
     font-size: 25px;
 }
 
+/* countdown timer area styling */
 .timeLeft {
     display: block;
     background-color: #d0aaea;
@@ -71,6 +73,7 @@ button {
 
 }
 
+/* answers and questions styling including hidden class */
 .quizArea {
     display: block;
     background-color:	#d0aaea;
@@ -102,6 +105,7 @@ button {
   display:none
   }
 
+/* Score Area styling */
 span {
 	display: block;
 	width: 100%;

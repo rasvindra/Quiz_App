@@ -1,3 +1,5 @@
+// Globally declared variables. some for elements in HTML
+
 var time = 30
 var timeLeft = 30
 var timeEl = document.getElementById("inSeconds")
@@ -7,8 +9,7 @@ var answersIndex = 0
 var savedScore = ""
 var timeKeeper = ""
 
-
-
+// Object array that holds questions and answers and correct answers
 var allQuestions = [
 {
     question: "Which U.S. President was inducted in the National Wrestling Hall of Fame in 1992?",
@@ -62,6 +63,7 @@ var allQuestions = [
 },
 ];
 
+// functions that start the quiz, start the countdown, load questions, check answers, and end the game with option to display results
 function beginQuiz() {
 var readyQuiz = confirm ("Are you ready to play CRAZY HISTORY TRIVIA!!? You will be given 30 seconds to answer 5 questions correctly. Every incorrect answer will take 5 seconds off the clock. Good Luck!")
 if (readyQuiz){
@@ -156,4 +158,5 @@ function checkAnswer(){
         }
 };
 
+// query selector listening for button click on HTML to start quiz
 document.querySelector("#startQuiz").addEventListener("click",beginQuiz)
