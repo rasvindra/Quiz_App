@@ -95,7 +95,7 @@ function loadQuestion(){
     var ans4 = document.getElementById("answer4");
     ans4.innerHTML=question.answers.d;
     ans4.addEventListener('click', checkAnswer);
-  }
+}
 
 function startClock() {
     timeLeft--;
@@ -103,7 +103,7 @@ function startClock() {
 if (timeLeft <= 0) {
  endQuiz()
 }
-};
+}
 
 function endQuiz() {
     clearInterval(
@@ -157,7 +157,8 @@ function checkAnswer(){
         {
           loadQuestion()
         }
-};
+}
+
 // messing with local storage
 // function getHighscores() {
 //     document.getElementById("yourScore").innerHTML = localStorage.getItem("1")
@@ -165,4 +166,5 @@ function checkAnswer(){
 // getHighscores()
 
 // query selector listening for button click on HTML to start quiz
+
 document.querySelector("#startQuiz").addEventListener("click",beginQuiz)
