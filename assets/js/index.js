@@ -121,6 +121,7 @@ function endQuiz() {
                 savedScore = person + " " + timeLeft;
                 scoreArea.innerHTML=savedScore;
                 answersSection.classList.add("hidden");
+                localStorage.setItem(person, timeLeft)
             }
             
             else {
@@ -157,6 +158,11 @@ function checkAnswer(){
           loadQuestion()
         }
 };
+// messing with local storage
+// function getHighscores() {
+//     document.getElementById("yourScore").innerHTML = localStorage.getItem("1")
+// }
+// getHighscores()
 
 // query selector listening for button click on HTML to start quiz
 document.querySelector("#startQuiz").addEventListener("click",beginQuiz)
