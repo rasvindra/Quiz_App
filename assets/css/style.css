@@ -31,11 +31,11 @@ h1 {
     border-radius: 25px;
     box-shadow:black 0 2px 5px 2px;
     background-color: #d0aaea;
-  }
+}
   
-  h2 {
+h2 {
     text-align: center;
-  }
+}
 
 /* style to make button look like it can be clicked */
 button {
@@ -84,7 +84,7 @@ button {
     padding: 20px;
     width: 69%;
     font-weight: bold;
-  }
+}
   
 .quizArea li {
     margin-top: 10px;
@@ -95,7 +95,7 @@ button {
     border-radius: 20px;
     list-style: none;
     border-style: outset;
-  }
+}
 
 .allAnswers {
   padding-bottom: 8px;
@@ -103,7 +103,7 @@ button {
 
 .quizArea.hidden{
   display:none
-  }
+}
 
 /* Score Area styling */
 span {
@@ -124,8 +124,8 @@ span {
     margin: 60px auto;
     padding: 20px;
     width: 100%;
-    }
+}
 
-  .scoreArea p {
+.scoreArea p {
     text-align: center;
-  }
+}
