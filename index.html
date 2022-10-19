@@ -8,9 +8,9 @@
     <title>Quiz As Fast As You Can!</title>
 </head>
 <body>
+    <a href="#scoreList">Click Here to see the score list</a>
     <header>
         <h1>Answer as many questions as you can correctly within the time alloted</h1>
-
         <button id="startQuiz">Click Here to Start the Quiz!</button>
     </header>
     <main>
@@ -24,15 +24,20 @@
             <h2>Click on the Answer Below!</h2>
             <p> <span id="answerSection"></span></p>
                 <ul clas="allAnswers">
-                    <li id =answer1></li>
-                    <li id =answer2></li>
-                    <li id =answer3></li>
-                    <li id =answer4></li>
+                    <li id ="answer1"></li>
+                    <li id ="answer2"></li>
+                    <li id ="answer3"></li>
+                    <li id ="answer4"></li>
                 </ul>
         </section>
+
         <section class="scoreArea">
             <h2>Scores List</h2>
             <p>Your Score: <span id="yourScore"></span></p>
+
+            <h2>Stored Scores</h2>
+                <ul id = "scoreList">
+                </ul>
         </section>
 
 

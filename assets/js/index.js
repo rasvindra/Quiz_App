@@ -5,6 +5,7 @@ var timeLeft = 30
 var timeEl = document.getElementById("inSeconds")
 var answersSection = document.getElementById("answers")
 var scoreArea = document.getElementById("yourScore")
+var storedScores = document.getElementById("scoreList")
 var answersIndex = 0
 var savedScore = ""
 var timeKeeper = ""
@@ -121,7 +122,7 @@ function endQuiz() {
                 savedScore = person + " " + timeLeft;
                 scoreArea.innerHTML=savedScore;
                 answersSection.classList.add("hidden");
-                localStorage.setItem(person, timeLeft)
+                localStorage.setItem(person, JSON.stringify(timeLeft))
             }
             
             else {
@@ -159,12 +160,29 @@ function checkAnswer(){
         }
 }
 
-// messing with local storage
-// function getHighscores() {
-//     document.getElementById("yourScore").innerHTML = localStorage.getItem("1")
-// }
-// getHighscores()
+function getScores() {
+    for (var i = 0; i < localStorage.length; i++) {
+        // set iteration key name
+        var key = localStorage.key(i);
+        // use key name to retrieve the corresponding value
+        var value = JSON.parse(localStorage.getItem(key));
+        // console.log the iteration key and value
+        console.log('Key: ' + key + ', Value: ' + value);
+
+        var newLi = document.createElement("li");
+        var newScore = document.createTextNode(key+ " "+value);
+        newLi.appendChild(newScore);
+        storedScores.appendChild(newLi);
+
+        // Need to figure out how to place key and associated values into each Li
+        // document.querySelector("score1").innerHTML = key+value;
+
+
+    }
+}
+getScores()
+
+
 
 // query selector listening for button click on HTML to start quiz
-
 document.querySelector("#startQuiz").addEventListener("click",beginQuiz)
