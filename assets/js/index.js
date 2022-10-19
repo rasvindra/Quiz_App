@@ -168,20 +168,14 @@ function getScores() {
         var value = JSON.parse(localStorage.getItem(key));
         // console.log the iteration key and value
         console.log('Key: ' + key + ', Value: ' + value);
-
+        // creating new li's and appending them with pulled data and to HTML
         var newLi = document.createElement("li");
         var newScore = document.createTextNode(key+ " "+value);
         newLi.appendChild(newScore);
         storedScores.appendChild(newLi);
-
-        // Need to figure out how to place key and associated values into each Li
-        // document.querySelector("score1").innerHTML = key+value;
-
-
     }
 }
 getScores()
-
 
 
 // query selector listening for button click on HTML to start quiz
