@@ -73,9 +73,10 @@ if (readyQuiz){
 }
 
 function startQuestions(){
-    answersSection.classList.remove("hidden")
-    var timeLeft = 30
-    timeKeeper = setInterval(startClock, 1000)
+    timeLeft=30;
+    timeEl.innerHTML=timeLeft;
+    answersSection.classList.remove("hidden");
+    timeKeeper = setInterval(startClock, 1000);
     loadQuestion()
 }
 
@@ -121,9 +122,10 @@ function endQuiz() {
 
             if (person !=null && person !=="Enter Name" && person.length>0) {
                 savedScore = person + " " + timeLeft;
-                scoreArea.innerHTML=savedScore;
+                // scoreArea.innerHTML=savedScore;
                 answersSection.classList.add("hidden");
                 localStorage.setItem(person, JSON.stringify(timeLeft))
+                window.location.reload(); 
             }
             
             else {
