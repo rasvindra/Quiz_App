@@ -74,6 +74,7 @@ if (readyQuiz){
 
 function startQuestions(){
     answersSection.classList.remove("hidden")
+    var timeLeft = 30
     timeKeeper = setInterval(startClock, 1000)
     loadQuestion()
 }
